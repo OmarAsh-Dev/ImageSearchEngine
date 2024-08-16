@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Image Search Engine",
+    "version": "1.0",
+    "description": "A simple image search engine.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon/image_11611209.png",
+        "48": "icon/image_1161120948.png",
+        "128": "icon/image_11611209128.png"
+      },
+      "default_popup_width": 400,
+      "default_popup_height": 500
+    },
+    "icons": {
+      "16": "icon/image_11611209.png",
+      "48": "icon/image_1161120948.png",
+      "128": "icon/image_11611209128.png"
+    },
+    "permissions": []
+  }
+  

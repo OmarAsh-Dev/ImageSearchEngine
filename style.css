@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(75deg, #1c2029, #221c2d);
+    color: #fff;
+    width: 400px;
+    height: 100px;
+    max-height: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px auto 20px;
+    font-weight: 600;
+}
+
+h1 span {
+    color: #c1b5db;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    height: 80px;
+    padding: 5px;
+}
+
+form input {
+    flex: 1;
+    width: 300px;
+    height: 35px;
+    border: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: 0;
+    background: #303030;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 30px;
+}
+
+form button {
+    padding: 5px 5px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    outline: none;
+    background: #341953;
+    color: #c1b5db;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+::placeholder {
+    color: #fff;
+    font-size: 18px;
+}
+
+#show-more {
+    background: transparent;
+    color: #c1b5db;
+    border: 0;
+    outline: 0;
+    text-decoration: underline;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 10px auto 15px;
+    cursor: pointer;
+    display: none;
+}
+
+#search-results {
+    width: 80%;
+    margin: 30px auto 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+#search-results img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.6s ease;
+}
+
+#search-results img.loaded {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#search-results img:hover + .url-overlay {
+    display: block;
+}
+
+.url-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    display: none; /* Hide by default */
+}

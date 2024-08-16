@@ -46,9 +46,15 @@ async function searchImages() {
             }, 5000); 
         });
 
+        imageContainer.addEventListener("click", (e) => {
+            e.preventDefault();
+            clearTimeout(hoverTimer);
+            urlOverlay.style.display = "block";
+            window.open(result.links.html, '_blank');
+        });
+
         imageContainer.addEventListener("mouseout", () => {
             clearTimeout(hoverTimer);
-            urlOverlay.style.display = "none";
         });
     });
 
@@ -66,3 +72,4 @@ showmoreButton.addEventListener("click", () => {
     page++;
     searchImages();
 });
+

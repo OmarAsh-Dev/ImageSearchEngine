@@ -23,7 +23,7 @@ async function searchImages() {
         imageContainer.classList.add("image-container");
 
         const image = document.createElement("img");
-        image.src = result.urls.small;
+        image.src = result.urls.regular;
         image.title = result.urls.small_s3;
         image.onload = () => {
             image.classList.add("loaded");
